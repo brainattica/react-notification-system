@@ -1,0 +1,48 @@
+@-webkit-keyframes slide {
+    100% { right: 0; }
+}
+
+@keyframes slide {
+    100% { right: 0; }
+}
+
+.notification-center {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	.notification {
+		display: block;
+		margin-bottom: 20px;
+		width: 350px;
+		height: 100px;
+		padding: 10px;
+		opacity: 0;
+		
+		&.notification-in {
+			opacity: 1;
+			transition: opacity 2s ease-in-out;
+			-moz-transition: opacity 2s ease-in-out;
+			-webkit-transition: opacity 2s ease-in-out;
+		}
+		.notification-content, .notification-title {
+			display: block;
+		}
+		.notification-close {
+			float: right;
+			cursor: pointer;
+		}
+		.notification-title {
+			font-weight: bold;
+		}
+		&.notification-error {
+			background: #ff7f7f;
+		}
+		&.notification-info {
+			background: #99ff99;
+		}
+		&.notification-warn {
+			background: #ffff99;
+		}
+	}
+}
